@@ -26,9 +26,6 @@
                     'slate-300': '#D1D1DF',
                     'white': '#FAFAFA',
                 },
-                backgroundImage: {
-                    'footer-image-mobile': "url('./assets/mobile/image-footer.jpg')"
-                },
                 borderRadius: {
                     'button': '29px'
                 }
@@ -41,8 +38,8 @@
     </script>
 </head>
 
-<body class="text-Red Hat Display">
-    <main class="bg-white flex flex-col justify-center items-center w-full max-w-[375px]">
+<body class="text-Red Hat Display flex justify-center">
+    <main class="bg-white flex flex-col justify-center items-center w-full  ">
         <!-- Navigation -->
         <nav class="w-full flex justify-center pt-[48px] px-[80px]">
             <img class="w-[118px] h-[28px]" src="./assets/logo.svg" alt="">
@@ -50,19 +47,31 @@
 
         <!-- Hero Section -->
         <section class="flex flex-col items-center text-center overflow-hidden py-[64px] px-[32px]">
-            <!-- Left and Right Images -->
-            <div class="relative flex items-center -mx-[60px] pb-[48px]">
-                <img class=" w-auto h-auto object-cover" src="./assets/tablet/image-hero.png" alt="">
+            <!-- Centre Image -->
+            <div class="relative flex items-center -mx-[50px]  pb-[48px]">
+                <img class="w-auto h-auto object-cover md:block lg:hidden" src="./assets/tablet/image-hero.png" alt="Hero Image">
+            </div>
+            <!-- Left Image for Desktop -->
+            <div class="hidden lg:block absolute -left-10 top-[140px]">
+                <img class="h-auto object-cover" src="./assets/desktop/image-hero-left.png" alt="Hero Left Image">
             </div>
             <!-- Center Content -->
-            <div class="relative z-10 flex flex-col gap-[32px]">
-                <h1 class="text-slate-900 text-[40px] text-center font-black leading-[44px]">Group Chat for Everyone</h1>
-                <p class="text-slate-600 text-[16px] font-semibold leading-[24px]">Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.</p>
-                <!-- Buttons -->
-                <div class="flex flex-col gap-[8px] items-center">
-                    <button class="bg-cyan-600 text-white py-[16px] px-[40px] rounded-button">Download v1.3</button>
-                    <button class="bg-purple-600 text-white py-[16px] px-[40px] rounded-button">What is it?</button>
+            <div class="z-10 flex flex-col gap-[32px] w-full max-w-[448px] text-center lg:text-left">
+                <h1 class="text-slate-900 text-[40px] md:text-[48px] lg:text-[64px] font-black leading-[44px] md:leading-[52.8px] text-center">
+                    Group Chat for Everyone
+                </h1>
+                <p class="text-slate-600 text-[16px] lg:text-[18px] font-semibold leading-[24px] text-center">
+                    Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.
+                </p>
+                <div class="flex flex-col gap-[8px] items-center md:flex-row justify-center">
+                    <button class="bg-cyan-600 text-white font-bold py-[16px] px-[40px] rounded-button hover:bg-cyan-300">
+                        Download <span class="pl-[4px] text-cyan-300">v1.3</span>
+                    </button>
+                    <button class="bg-purple-600 text-white font-bold py-[16px] px-[40px] rounded-button hover:bg-purple-300">What is it?</button>
                 </div>
+            </div>
+            <div class="hidden lg:block absolute -right-10 top-[140px]">
+                <img class="h-auto object-cover" src="./assets/desktop/image-hero-right.png" alt="Hero Right Image">
             </div>
         </section>
 
@@ -74,21 +83,21 @@
                     01
                 </div>
             </div>
-            <div class="grid grid-rows-2 grid-cols-2 gap-[16px] py-[64px]">
-                <img class="h-[152px] w-[222px] rounded-lg" src="./assets/desktop/image-woman-in-videocall.jpg" alt="">
-                <img class="h-[152px] w-[222px] rounded-lg" src="./assets/desktop/image-women-videochatting.jpg" alt="">
-                <img class="h-[152px] w-[222px] rounded-lg" src="./assets/desktop/image-men-in-meeting.jpg" alt="">
-                <img class="h-[152px] w-[222px] rounded-lg" src="./assets/desktop/image-man-texting.jpg" alt="">
+            <div class="grid grid-rows-2 grid-cols-2 gap-[16px] lg:gap-[32px] py-[64px] md:grid-cols-4 md:grid-rows-1">
+                <img class="h-[152px] w-[222px] lg:h-[280px] lg:w-[256px] rounded-lg" src="./assets/desktop/image-woman-in-videocall.jpg" alt="">
+                <img class="h-[152px] w-[222px] lg:h-[280px] lg:w-[256px] rounded-lg" src="./assets/desktop/image-women-videochatting.jpg" alt="">
+                <img class="h-[152px] w-[222px] lg:h-[280px] lg:w-[256px] rounded-lg" src="./assets/desktop/image-men-in-meeting.jpg" alt="">
+                <img class="h-[152px] w-[222px] lg:h-[280px] lg:w-[256px] rounded-lg" src="./assets/desktop/image-man-texting.jpg" alt="">
             </div>
             <!-- Section Title and Description -->
-            <div class="flex flex-col pb-[64px]">
-                <h4 class="text-cyan-600 text-[12px] font-black text-center leading-[13.2px] tracking-[4px] uppercase pb-[16px]">
+            <div class="flex flex-col items-center pb-[64px] ">
+                <h4 class="text-cyan-600 text-[12px] md:text-[14px] lg:text-[16px] text-center leading-[13.2px] md:leading-[15.4px] tracking-[4px] uppercase pb-[16px]">
                     Built for modern use
                 </h4>
-                <h2 class="text-slate-900 text-[32px] font-black text-center leading-[35.2px] pb-[32px]">
+                <h2 class="text-slate-900 text-[32px] md:text-[36px] lg:text-[40px] font-black text-center leading-[35.2px] md:leading-[39.6px] pb-[32px] lg:max-w-[445px]">
                     Smarter meetings, all in one place
                 </h2>
-                <p class="text-slate-600 text-[16px] font-semibold text-center leading-[24px]">
+                <p class="text-slate-600 text-[16px] lg:text-[18px] font-semibold text-center leading-[24px] lg:leading-[27px] md:w-[504px] lg:w-[544px] ">
                     Send messages, share files, show your screen, and record your meetings — all in one 
                     workspace. Control who can join with invite-only team access, data encryption, and data export.
                 </p>
@@ -103,20 +112,27 @@
         </section>
 
         <!-- Footer Section -->
-        <footer class="relative bg-footer-image-mobile bg-cover py-[64px] px-[32px] -mt-[28px]">
-            <div class="absolute inset-0 bg-cyan-600 opacity-70 z-index"></div>
-            <div class="flex flex-col justify-center items-center">
-                <h3 class="text-white text-[32px] text-center font-black leading-[35.2px] z-0">
+        <footer class="relative py-[64px] px-[32px] lg:py-[112px] lg:px-[64px] -mt-[28px] w-full">
+            <!-- Mobile Image -->
+            <img class="absolute inset-0 w-full h-full object-cover lg:hidden z-1" src="./assets/mobile/image-footer.jpg" alt="Footer Image">
+            <!-- Tablet Image -->
+            <img class="absolute inset-0 w-full h-full object-cover hidden md:block lg:hidden z-1" src="./assets/tablet/image-footer.jpg" alt="Footer Image">
+            <!-- Desktop Image -->
+            <img class="absolute inset-0 w-full h-full object-cover hidden lg:block z-1" src="./assets/desktop/image-footer.jpg" alt="Footer Image">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-cyan-600 opacity-70 z-2"></div>
+            <div class="relative flex flex-col lg:flex-row justify-between items-center lg:items-center lg:px-[100px] space-y-8 lg:space-y-0">
+                <h3 class="text-white text-[32px] md:text-[36px] lg:text-[40px] leading-[35.2px] md:leading-[56px] font-black text-left z-10 lg:w-1/3">
                     Experience more together
                 </h3>
-                <p class="text-white text-[16px] font-semibold text-center leading-[24px] py-[24px] z-0">
+                <p class="text-white text-[16px] lg:text-[18px] font-semibold leading-[24px] lg:leading-[27px] lg:w-[425px] text-left z-10 lg:w-1/3 lg:px-8">
                     Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.
                 </p>
-                <button class="bg-purple-600 text-[16px] font-bold text-white leading-[24px] py-[16px] px-[40px] rounded-button z-0">Download v1.3</button>
+                <button class="bg-purple-600 text-[16px] font-bold text-white leading-[24px] py-[16px] px-[40px] rounded-button z-10 lg:w-auto hover:bg-purple-300">
+                    Download <span class="pl-[4px] text-purple-300">v1.3</span>
+                </button>
             </div>
         </footer>
     </main>
-</body>
-</html>
-
+</body> 
 </html>
